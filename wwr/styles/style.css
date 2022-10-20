@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lemon&family=Roboto+Slab&display=swap');
+
 #content{
     max-width: 1600px;
     margin: 0 auto;
@@ -28,6 +30,8 @@ main section{
 
 body{
     background-color: #FEFAE0;
+    font-family: 'Roboto Slab', Helvetica, sans-serif;
+    font-size: 22px;
 }
 
 header{
@@ -44,6 +48,7 @@ nav a:hover{
     background-color: #BC6C25;
     color: white;
     text-decoration: none;
+    font-size: 18px;
 }
 
 .book:hover, .join:hover{
@@ -53,6 +58,7 @@ nav a:hover{
 
 .msg{
     background-color: #606C38;
+    line-height: 1.5em;
 }
 
 footer{
@@ -79,6 +85,9 @@ footer p a:hover{
 
 .home-title{
     color: #283618;
+    font-family: 'Lemon', 'Bree Serif', serif, cursive;
+    font-size: 2em;
+
 }
 
 h4{
@@ -87,15 +96,19 @@ h4{
 
 .msg h2{
     color: white;
+    font-family: 'Lemon', 'Bree Serif', serif, cursive;
+
 }
 
 .msg p{
     color: white;
+    font-size: .8em;
 }
 
-.icon{
+.icon, .logo{
     width: 80px;
 }
+
 
 #hero-img{
     width: 100%;
