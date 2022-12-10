@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bree+Serif&display=swap');
+
+#content{
+    max-width: 1600px;
+    margin: 0 auto;
+    font-size: 18px;
+    text-align: center;
+}
+
+header{
+    background-color: #ED0101;           
+    display: grid;
+    grid-template-columns: 150px auto;
+    font-family: 'Bree Serif', serif;    
+}
+
+.logo{
+    width: 90px;
+}
+
+#logo_link{
+    padding-top: 15px;
+    justify-self: center;
+    align-self: center;
+}
+
+nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+}
+
+
+nav a{
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    padding: 35px;
+    font-size: 1.2em;
+    
+}
+
+nav a:hover{
+    background-color: #970005;
+    color: white;
+}
+
+
+p{
+    font-family: 'Bree Serif', serif;
+    color: #0C44AC;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Archivo Black', sans-serif;    
+  }
+
+  footer{
+    background-color: #ED0101;
+    color: white;
+    padding: 25px ;
+    margin-top: 200px;
+    display: grid;    
+    grid-template-columns: 150px 1fr 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    
+    
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+    
+}
+
+footer a:hover{
+    color: white;
+}
+
+footer p{
+    font-size: 1.2em;  
+    color: white;  
+    
+}
+
+footer p a:hover{
+    text-decoration: underline;
+}
+
+footer .logo{
+    width: 120px;
+}
+
+.label1{
+    grid-column: 2/4;
+}
+
+
+footer .social img{   
+   padding-top: 15px;
+}
+.social{
+    grid-column: 6/8;
+}
+
+.img_content > img{      
+   width: 900px;
+}
