@@ -91,6 +91,12 @@ footer .logo{
     width: 120px;
 }
 
+#logo_link_footer{
+    padding-top: 15px;
+    justify-self: center;
+    align-self: center;
+}
+
 .label1{
     grid-column: 2/4;
 }
