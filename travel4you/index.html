@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel4you</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style.css">    
 </head>
 <body>
     <div id="content">
@@ -19,22 +19,124 @@
                 <a href="procedures.html">Procedures</a>                
             </nav>
         </header>
-
-        <p>
-            Our main commitment is to make your trip to the United States a rewarding and successful experience. 
-            We have excellent advisors who will help you at every step of your process. We also have a free 
-            online pre-assessment, which will help you find out if you have the minimum requirements to apply 
-            for an American visa. In case you do not have the minimum requirements to apply for an American visa, 
-            we will guide you so that you can have them and be ready to start your process.
-            Travel4you has extensive experience in the field, which is why 7 out of 10 visas are approved.
-            Do not wait any longer, start today with your online pre-advice.
-            Learn about the types of procedures we offer.
-        </p>
-        <div class="img_content">
-            <img src="images/home.jpg" alt="image for homepage">
-            <img src="images/home2.jpg" alt="image for homepage">
-        </div>
         
+        
+        <!-- Slideshow container -->
+            <div class="slideshow-container">                               
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img id="img_home" src="images/home_img1.png" style="width:100%" alt="home image 1">                        
+                    </div>                   
+                   
+                    <p class="msg">
+                        Our main commitment is to make your trip to the United States a rewarding and successful experience. 
+                        We have excellent advisors who will help you at every step of your process. We also have a free 
+                        online pre-assessment, which will help you find out if you have the minimum requirements to apply 
+                        for an American visa
+                    </p>                   
+                    <a class='join' href="onlinep.html">Apply now</a>
+                  
+                                                                            
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="images/home_img2.png" style="width:100%" alt="home image 2">                    
+                    </div>
+                                            
+                    <p class="msg">
+                        In case you do not have the minimum requirements to apply for an American visa, 
+                        we will guide you so that you can have them and be ready to start your process.
+                        Travel4you has extensive experience in the field, which is why 7 out of 10 visas are approved.
+                    </p>
+                                                                        
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="images/home_img3.png" style="width:100%" alt="home image 3">                    
+                    </div>
+
+                    <p class="msg">
+                        Don't wait any more, and start today with your online pre-assessment.
+                        Learn about the types of the procedures that we offer.
+                    </p>
+                    <a class='join' href="procedures.html">Check here</a>
+                     
+                
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>    
+                                                                        
+            </div>
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div> 
+                                       
+            <main class="home-grid">
+
+                <div class="main-title">
+                    <h1>Some of our services</h1>
+                </div>                
+                <section class="bussiness-card">
+                    <a href="procedures.html">
+                        <img class="card-img" src="images/bussiness_visa.png" alt="image bussiness card">   
+                    </a>                 
+                    <h3>Business visa (B1)</h2>
+                </section>
+                <section class="tourist-card">
+                    <a href="procedures.html">
+                        <img class="card-img" src="images/tourist_visa.png" alt="image tourist card">                    
+                    </a>
+                    <h3>Tourist visa (B2)</h2>
+                </section>
+                <section class="student-card">
+                    <a href="procedures.html">
+                        <img class="card-img" src="images/student_visa.png" alt="image student card">        
+                    </a>            
+                    <h3>Student visa (F1)</h2>
+                </section>
+                
+                <div class="middle-title">
+                    <h1>Some of success stories</h1>
+                </div> 
+                
+                <div class="card-profile profile1">
+                    <div class="card-header-img">
+                        <img src="images/woman_img.png" alt="Profile Image" class="profile-img">
+                    </div>
+                    <div class="card-body">
+                        <p class="name">Rose Phillys</p>                        
+                        <p class="job">Thanks to Travel4you my visa application was approved. I recommend them.</p>
+                    </div>
+                </div>
+
+                <div class="card-profile profile2">
+                    <div class="card-header-img">
+                        <img src="images/man_img.png" alt="Profile Image" class="profile-img">
+                    </div>
+                    <div class="card-body">
+                        <p class="name">Jhon Doe</p>                        
+                        <p class="job">Something that seemed impossible for me and my family could be
+                            achieved through Travel4you. My tourist visa application was approved. 
+                            Excellent professionals.</p>
+                    </div>
+                </div>
+
+                <div class="card-profile profile3">
+                    <div class="card-header-img">
+                        <img src="images/woman_img.png" alt="Profile Image" class="profile-img">
+                    </div>
+                    <div class="card-body">
+                        <p class="name">Victoria Holland</p>                        
+                        <p class="job">I didn't have an adequate profile to apply for a student visa. 
+                            Travel4you guided me through every step of my application and something that 
+                            at first seemed never to come could be achieved thanks to them.</p>
+                    </div>
+                </div>
+
+            </main>     
 
         <footer>
             <a id="logo_link_footer" href="index.html">
@@ -56,6 +158,58 @@
         </footer>
 
     </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");          
+          let dots = document.getElementsByClassName("dot");    
+          let msg_slides = document.getElementsByClassName("msg");
+          let btn = document.getElementsByClassName("join");
+               
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          
+          for (i = 0; i < slides.length; i++) {            
+            slides[i].style.display = "none";  
+            msg_slides[i].style.display = "none";                                    
+          }
+
+          for (i = 0; i < btn.length; i++) {                      
+            btn[i].style.display = "none";             
+          }          
+
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+
+          if(slideIndex-1 == 0){
+            btn[slideIndex-1].style.display = "block";            
+          }
+
+          if(slideIndex-1 == 2){
+            btn[slideIndex-2].style.display = "block";            
+          }
+          
+          slides[slideIndex-1].style.display = "block";            
+          msg_slides[slideIndex-1].style.display = "block";                      
+          dots[slideIndex-1].className += " active";          
+                    
+        }                      
+    </script>    
     
 </body>
 </html>
