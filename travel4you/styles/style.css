@@ -370,7 +370,7 @@ main{
  
 
     .mySlides img{
-        content: url("/travel4you/images/home.jpg");
+       /* content: url("/travel4you/images/home.jpg");*/
     }
     
     nav, footer {
