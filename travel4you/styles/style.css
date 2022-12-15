@@ -7,6 +7,7 @@
     text-align: center;
 }
 
+
 header{
     background-color: #ED0101;           
     display: grid;
@@ -155,6 +156,16 @@ main{
     margin-top: 50px;    
 }
 
+.main2{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    /*grid-template-rows: repeat(10, 1fr);*/
+    margin-top: 50px;  
+    max-width: 1200px;  
+    margin: auto;
+}
+
+
 .main-title{
     grid-column: 3/9;
 }
@@ -194,11 +205,20 @@ main{
 }
 
 /* Slideshow container */
-.slideshow-container {
+#slideshow-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);     
     grid-template-rows: repeat(11, 1fr);
     max-width: 1600px;    
+    position: relative;
+    margin: auto;    
+  }
+
+  #slideshow-container2 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);     
+    grid-template-rows: repeat(11, 1fr);
+    max-width: 1200px;    
     position: relative;
     margin: auto;    
   }
@@ -356,21 +376,98 @@ main{
 }
 
 
+/* ----------------------- FORM CSS ---------------------------------------------------*/
+
+* {box-sizing: border-box}
+
+.horizontal-line{    
+    border: 1px solid #0C44AC;   
+    grid-column: 1/11;     
+}
+
+form{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    max-width: 1200px;
+    margin: auto;
+}
+
+select {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+  }
+
+/* Add padding to containers */
+.form-container {    
+    grid-column: 5/11;    
+  }
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;  
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;  
+  
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9; 
+  margin-top: 50px; 
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+
   @media screen and (max-width: 1000px) {
     
     .slideshow-container{
         display: block;
     }
 
+    .form-container{
+        display: block;
+    }
+
     .home-grid{
         display: block;
         height: auto;
-    }
-
- 
-
-    .mySlides img{
-       /* content: url("/travel4you/images/home.jpg");*/
     }
     
     nav, footer {

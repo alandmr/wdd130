@@ -20,18 +20,129 @@
             </nav>
         </header>
 
-        <p>
-            Do you know what a migratory profile is?
+        <!-- Slideshow container -->
+        <div id="slideshow-container2">                               
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img id="img_home" src="images/img_onlinep1.png" style="width:100%" alt="home image 1">                        
+            </div>                   
+                                                                             
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="images/img_onlinep2.png" style="width:100%" alt="home image 2">                    
+            </div>
+                                                                
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="images/img_onlinep3.png" style="width:100%" alt="home image 3">                    
+            </div>            
+        
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>    
+                                                                
+    </div>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div> 
+            
+    <main class="main2 home-grid">
+        <div class="main-title">
+            <h1>Online pre-assessment</h1>
+        </div>
+        <div> </div>    
+        <br>   
+        <p style="text-align:justify; grid-column: 1/11;">
+            Do you know what is a migratory profile?
             An immigration profile allows you to know your percentage of eligibility for an American visa.
             With the online pre-assessment you will be able to know in real time your percentage of eligibility 
             for an American visa. If you happen to have the right profile to apply, you should continue your 
             process with personalized advice. In case you do not have a suitable profile, our advisors are ready
             to help you have an optimal profile and that way you can apply for your American visa processing.
-          </p>
-        <div class="img_content">
-            <img src="images/page2.png" alt="image for pre-assessment">
-            <img src="images/page2_1.jpg" alt="image for pre-assessment">
+          </p>  
+
+          <h2 style="text-align: left; grid-column: 1/4;">Migratory Profile Form</h2>                                   
+    </main>
+
+    <form action="page.html" >            
+        <div class="horizontal-line"></div>
+        
+        <h2 style="text-align: left; grid-column: 1/4;">Personal Data</h2>        
+        <div class="form-container">
+            <h2 style="text-align: left;">Full name</h2>
+            <input type="text" placeholder="Enter full name" name="name" id="name" required>
+
+            <h2 style="text-align: left;">Email</h2>
+            <input type="text" placeholder="Enter email" name="email" id="email" required>
+
+            <h2 style="text-align: left;">Phone number</h2>
+            <input type="text" placeholder="Phone number" name="phone" id="phone" required>
+
+            <h2 id="Label_Country" style="text-align: left;">Country or residency area</h2>
+            <select id="country" name="country" required onchange="selectedOption()">
+                <option value="none">Select</option>                
+                <option value="chile">Chile</option>
+                <option value="europa">Europa</option>
+                <option value="la">Latin America</option>
+                <option value="vzla">Venezuela</option>
+            </select>
+
+            <h2 id="Label_Migratory" style="text-align: left; display: none;">Migratory status</h2>
+                <select id="migratory" name="migratory" required style="display: none;">
+                    <option value="none">Select</option>
+                    <option value="pmm">Permanent resident for membership</option>
+                    <option value="prpa">Permanent resident for political asylum</option>
+                    <option value="tp">Temporary Resident</option>                    
+                </select>
+
+                <h2 id="Label_Membership" style="text-align: left; display: none;">Membership</h2>
+                <select id="membership" name="membership" required style="display: none;">
+                    <option value="none">Select</option>
+                    <option value="am">Married with European</option>
+                    <option value="chile">With European children</option>
+                </select>
+                                                                                                                       
+        </div> 
+        <br><br>
+        <div class="horizontal-line"></div>
+        <h2 style="text-align: left; grid-column: 1/4;">Additional data</h2>
+        <div class="form-container">
+            <h2 style="text-align: left;">Trips Made</h2>
+                <select id="migratory" name="migratory" required>
+                    <option value="none">Select</option>
+                    <option value="0-3">0 - 3</option>
+                    <option value="3-5">3 - 5</option>
+                    <option value="6">Greather than or equal to 6</option>                    
+                </select>
+
+                <h2 style="text-align: left;">Income and Wages</h2>
+                <select id="membership" name="membership" required>
+                    <option value="none">Select</option>
+                    <option value="0-500">$ 0 - 500</option>
+                    <option value="600-1000">$ 600 - 1000</option>
+                    <option value="1100">$ Greather than or equal to 1100</option>
+                </select>  
+
+                <h2 style="text-align: left;">Assets and Property</h2>
+                <select id="membership" name="membership" required>
+                    <option value="none">Select</option>
+                    <option value="ap_1-3">1 - 3</option>
+                    <option value="ap_3-5">3 - 5</option>
+                    <option value="ap_6">Greather than or equal to 6</option>                    
+                </select>
+
         </div>
+        
+        <br><br>
+        <div class="horizontal-line"></div>
+        <button type="submit" class="registerbtn" style="grid-column: 3/9;">Submit</button>           
+    
+      </form> 
         
 
         <footer>
@@ -54,6 +165,81 @@
         </footer>
 
     </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);  
+        
+        // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function selectedOption(){
+            var op_selected = document.getElementById("country").value;
+            if (op_selected === "europa"){  
+                document.getElementById("membership").value = "none"
+                document.getElementById("migratory").value = "none" 
+
+                document.getElementById("Label_Migratory").style.display = "block"  ;  
+                document.getElementById("migratory").style.display = "block";   
+                
+                document.getElementById("Label_Membership").style.display = "block"  ;  
+                document.getElementById("membership").style.display = "block"; 
+            }
+
+            if (op_selected === "chile" || op_selected === "vzla"){
+                document.getElementById("membership").value = "none"
+                document.getElementById("migratory").value = "none" 
+
+                document.getElementById("Label_Migratory").style.display = "none"  ;  
+                document.getElementById("migratory").style.display = "none";  
+                
+                document.getElementById("Label_Membership").style.display = "none"  ;  
+                document.getElementById("membership").style.display = "none";                  
+            }
+
+            if (op_selected === "la"){   
+                document.getElementById("membership").value = "none"
+                document.getElementById("migratory").value = "none" 
+                
+                document.getElementById("Label_Migratory").style.display = "block"  ;  
+                document.getElementById("migratory").style.display = "block";   
+
+                if (document.getElementById("Label_Membership").style.display === "block"){
+                    document.getElementById("Label_Membership").style.display = "none"  ;  
+                    document.getElementById("membership").style.display = "none";                       
+                }
+            }
+        }
+       
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");          
+          let dots = document.getElementsByClassName("dot");              
+          let btn = document.getElementsByClassName("join");
+               
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          
+          for (i = 0; i < slides.length; i++) {            
+            slides[i].style.display = "none";                                               
+          }           
+
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+         
+          slides[slideIndex-1].style.display = "block";                                         
+          dots[slideIndex-1].className += " active";          
+                    
+        }                      
+    </script>
     
 </body>
 </html>
