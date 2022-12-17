@@ -7,11 +7,22 @@
     text-align: center;
 }
 
+#content-uc{
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 18px;
+    text-align: center;
+}
+
 
 header{
     background-color: #ED0101;           
     display: grid;
     grid-template-columns: 150px auto;
+    font-family: 'Bree Serif', serif;    
+}
+
+button{
     font-family: 'Bree Serif', serif;    
 }
 
@@ -464,13 +475,63 @@ a {
     
   }
   
-.success {background-color: #0C44AC;} /* Green */
+.success {background-color: #0C44AC;} 
 .success:hover {background-color: #000052;}
 
 .center-btn{
     display: flex;
     justify-content: center;    
 }
+
+/*---------------------------- CSS PROCEDURE PAGE ----------------------------*/
+
+.section-content{
+    max-width: 1200px;
+    /*display: grid;
+    grid-template-columns: repeat(10, 1fr);*/
+    margin: 0 auto;
+}
+
+.procedure-section{
+    display: grid;
+    grid-template-columns: repeat(10,1fr); 
+    border: 1px solid lightgray;
+}
+
+.article-text{
+    text-align: justify;
+    grid-column: 5/11;
+    grid-row: 2/3;
+    margin: 0 20px 10px 0px;
+}
+
+.btn-procedure{
+    border: none; /* Remove borders */
+    color: white; /* Add a text color */
+    padding: 14px 28px; /* Add some padding */
+    cursor: pointer; /* Add a pointer cursor on mouse-over */
+    grid-column: 5/11;
+    grid-row: 3/4;
+    margin: 0 20px 20px 0px;
+    max-width: 60%;
+}
+  
+.btn-act-color {background-color: #ED0101;}
+.btn-act-color:hover {background-color: #970005;}
+
+.img-procedure{
+    grid-column: 1/5;
+    grid-row: 2/2;
+    max-width: 90%;
+    justify-self: center;
+    align-self: center;        
+    border: 5px solid #0C44AC;    
+    box-shadow: 5px 5px 10px #6f7364;
+    border-radius: 8px;
+    
+    
+}
+
 
 
   @media screen and (max-width: 1000px) {
